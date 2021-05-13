@@ -1,7 +1,6 @@
 FROM thevlang/vlang:alpine
 
-# Build app
-ADD main.v .
+ADD . .
 RUN v main.v
 
 CMD ["./main"]
