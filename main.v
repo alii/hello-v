@@ -1,17 +1,17 @@
 import structs { Node }
 
-fn invert_tree<T>(node &Node) Node<T> {
+fn invert_tree<T>(node &Node<T>) Node<T> {
 	mut cloned := Node{
 		left: node.left
 		right: node.right
 		val: node.val
 	}
 
-	if node.left != 0 {
+	if node.left != 0x0 {
 		cloned.right = node.left
 	}
 
-	if node.right != 0 {
+	if node.right != 0x0 {
 		cloned.left = node.right
 	}
 
