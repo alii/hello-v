@@ -5,6 +5,8 @@ fn fetch(url string) ?string {
 	return resp.text
 }
 
+println('started')
+
 result := go fetch('https://alistair.cloud/api/ping')
 
 println(result.wait() or { 'Unable to fetch' })
